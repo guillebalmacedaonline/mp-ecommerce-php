@@ -20,6 +20,6 @@ Route::post('/detail.php', function () {
 });
 
 Route::post('/process_pago', 'ProcessPagoController@processPago');
-Route::post('/pago_exitoso', 'ProcessPagoController@pago_exitoso')->name('pago_exitoso');
-Route::post('/pago_fallo', 'ProcessPagoController@pago_fallo')->name('pago_fallo');
-Route::post('/pago_pendiente', 'ProcessPagoController@pago_pendiente')->name('pago_pendiente');
+Route::get('/pago_exitoso', 'ProcessPagoController@pago_exitoso')->name('pago_exitoso');
+Route::get('/pago_fallo', 'ProcessPagoController@pago_fallo')->name('pago_fallo');
+Route::get('/pago_pendiente', 'ProcessPagoController@pago_pendiente')->name('pago_pendiente');
