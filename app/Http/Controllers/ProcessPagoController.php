@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProcessPagoController extends Controller
 {
@@ -79,6 +80,7 @@ class ProcessPagoController extends Controller
 
     public function webhooks_mercadopago(Request $request)
     {
+        Log::debug(json_encode($request));
         return response('OK');
     }
 }
