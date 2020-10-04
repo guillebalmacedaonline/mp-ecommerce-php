@@ -20,6 +20,7 @@ Route::post('/detail.php', function () {
 });
 
 Route::post('/process_pago', 'ProcessPagoController@processPago');
+Route::post('/webhooks_mercadopago', 'ProcessPagoController@webhooks_mercadopago');
 Route::get('/pago_exitoso', 'ProcessPagoController@pago_exitoso')->name('pago_exitoso');
 Route::get('/pago_fallo', 'ProcessPagoController@pago_fallo')->name('pago_fallo');
 Route::get('/pago_pendiente', 'ProcessPagoController@pago_pendiente')->name('pago_pendiente');

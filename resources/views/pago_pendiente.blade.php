@@ -73,10 +73,7 @@
                         </div>
                         <div class="as-accessories-results  as-search-desktop">
                             <div class="width:100%">
-                                <h3>PAGO EXITOSO</h3>
-                                <p> <strong>payment_method_id:</strong> {{$request["preference_id"]}} </p>
-                                <p> <strong>external_reference:</strong> {{$request["external_reference"]}}</p>
-                                <p> <strong>payment_id o collection_id:</strong> {{$request["collection_id"]}}</p>
+                                <h3>PAGO PENDIENTE</h3>
                             </div>
                         </div>
                     </div>

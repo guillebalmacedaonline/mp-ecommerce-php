@@ -75,4 +75,9 @@ class ProcessPagoController extends Controller
         $request = $request->all();
         return view('pago_exitoso', compact('request'));
     }
+
+    public function webhooks_mercadopago(Request $request)
+    {
+        return response('OK');
+    }
 }
