@@ -25,6 +25,7 @@ class ProcessPagoController extends Controller
         );
         $preference->auto_return = "approved";
         $preference->external_reference = "info@uniting.com.ar";
+        $preference->notification_url  = route('webhooks_mercadopago');
 
         //Exclusion de medio de pago
         $preference->payment_methods = array(
