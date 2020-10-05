@@ -64,6 +64,7 @@ class ProcessPagoController extends Controller
         $item->currency_id = "ARS";
         $item->unit_price = (float) $request->product_price;
         $preference->items = array($item);
+        $preference->payer = $payer;
         $preference->save();
 
         return redirect($preference->init_point);
@@ -89,7 +90,7 @@ class ProcessPagoController extends Controller
     }
 
     public function webhooks_mercadopago(Request $request)
-    {        
+    {
         Log::debug("WEBHOOK: ".json_encode($request->all()));
         return response('OK');
     }
