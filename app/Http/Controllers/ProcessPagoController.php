@@ -89,9 +89,8 @@ class ProcessPagoController extends Controller
     }
 
     public function webhooks_mercadopago(Request $request)
-    {
-        dd($request);
-        //Log::debug("DEBUG: ".json_encode($request));
+    {        
+        Log::debug("WEBHOOK: ".json_encode($request->all()));
         return response('OK');
     }
 }
