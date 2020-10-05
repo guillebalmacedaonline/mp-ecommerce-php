@@ -78,6 +78,16 @@ class ProcessPagoController extends Controller
         return view('pago_exitoso', compact('request'));
     }
 
+    public function pago_pendiente(Request $request)
+    {
+        return view('pago_pendiente');
+    }
+
+    public function pago_fallo(Request $request)
+    {
+        return view('pago_fallo');
+    }
+
     public function webhooks_mercadopago(Request $request)
     {
         Log::debug("DEBUG: ".json_encode($request));
